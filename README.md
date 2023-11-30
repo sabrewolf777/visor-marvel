@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+si se desea instalar las dependencias ejecutar el comando npm install.
+
+para el consumo de marvel-service se esta consultando por el puerto 8081 este se puede cambiar a su criterio.
