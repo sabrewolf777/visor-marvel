@@ -1,0 +1,47 @@
+<br>
+<h1 style="color: black;"><small>Historico</small></h1> 
+<hr style="color: black;margin-left: 0px;" >
+
+
+
+<div class="row" style="font-size: large;">
+    <table   id="tabla1" mat-table [dataSource]="dataSource"  class="table  tabla-resumen table-striped table-hover table-condensed " #tabla1>
+      <thead class="table-light">
+          <tr mat-header-row *matHeaderRowDef="displayedColumns" class="table  justify-content-center text-center" > </tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns; let i = index" ></tr>
+      </thead>
+      <tbody class="table-group-divider" >
+        <tr>
+
+          <ng-container matColumnDef="idusuario">
+                <th mat-header-cell *matHeaderCellDef class="table-title">ID USUARIO</th>
+                <td mat-cell *matCellDef="let element" class="table-dato border-left-none">{{ element.idusuario}}    
+                </td>
+          </ng-container>
+
+          <ng-container matColumnDef="fecha">
+            <th mat-header-cell *matHeaderCellDef class="table-title">FECHA</th>
+            <td mat-cell *matCellDef="let element" class="table-dato border-left-none">{{ element.fecha}}    
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="api">
+            <th mat-header-cell *matHeaderCellDef class="table-title">API CONSULTA</th>
+            <td mat-cell *matCellDef="let element" class="table-dato border-left-none">{{ element.api}}    
+            </td>
+      </ng-container>
+
+
+      </tr>
+      </tbody>
+    </table>
+   
+</div>
+<div class="pagination justify-content-center" style="font-size: 20px;font-weight: 600;">
+  
+  <mat-paginator color="warn" #paginator  [pageSize]="5" showFirstLastButtons ></mat-paginator>
+  
+</div>
+<div class="row row-cols-11 row-cols-md-7 g-8 " style="font-size: large;" *ngIf="!prod" (ngModel)="prod">
+    No exiten registros
+</div>
